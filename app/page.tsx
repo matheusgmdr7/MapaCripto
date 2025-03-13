@@ -19,6 +19,17 @@ import TestimonialCarousel from "@/components/testimonial-carousel"
 import ModuleMap from "@/components/module-map"
 import GoldButton from "@/components/gold-button"
 import CountdownTimer from "@/components/countdown-timer"
+import PageTitle from "@/components/page-title"
+
+export default function Home() {
+  // Código existente...
+
+  return (
+    <main className="bg-black text-white min-h-screen">
+      <PageTitle title="MapaCripto - Seu guia para o mercado de criptomoedas" />
+
+      {/* Resto do conteúdo existente... */}
+    </main>
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
