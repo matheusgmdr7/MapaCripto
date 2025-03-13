@@ -19,4 +19,3 @@ export default function PageTitle({ title = "MapaCripto" }: PageTitleProps) {
 
   return null
 }
-
