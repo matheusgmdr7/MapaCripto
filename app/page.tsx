@@ -32,15 +32,19 @@ export default function Home() {
       {/* Fixed CTA Button */}
       {isVisible && (
         <div className="fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-[#FFD700]/20 py-3 px-4 flex justify-between items-center backdrop-blur-sm">
-          <div className="text-sm md:text-base font-medium text-[#FFD700]">A Revolução Cripto Espera Por Você</div>
-          <GoldButton size="sm">QUERO INVESTIR EM CRIPTO</GoldButton>
+          <div className="text-xs md:text-base font-medium text-[#FFD700] truncate mr-2">
+            A Revolução Cripto Espera Por Você
+          </div>
+          <GoldButton size="sm" className="whitespace-nowrap text-xs md:text-sm">
+            QUERO INVESTIR
+          </GoldButton>
         </div>
       )}
 
       {/* Header Section */}
       <section
         ref={headerRef}
-        className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 md:py-32 overflow-hidden"
+        className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 py-16 md:py-20 lg:py-32 overflow-hidden"
       >
         {/* Modern background with subtle pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111] to-black">
@@ -65,9 +69,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className="mb-6 md:mb-8"
           >
-            <span className="inline-block px-4 py-1 rounded-full bg-[#FFD700]/10 text-[#FFD700] text-sm font-medium mb-6 border border-[#FFD700]/20">
+            <span className="inline-block px-3 py-1 md:px-4 md:py-1 rounded-full bg-[#FFD700]/10 text-[#FFD700] text-xs md:text-sm font-medium mb-4 md:mb-6 border border-[#FFD700]/20">
               MÉTODO EXCLUSIVO
             </span>
           </motion.div>
@@ -76,7 +80,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight tracking-tight"
           >
             <span
               className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107] drop-shadow-[0_0_5px_rgba(255,215,0,0.2)]"
@@ -90,7 +94,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl mb-10 text-white/80 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 text-white/80 max-w-3xl mx-auto"
           >
             O único método comprovado e validado por mais de 1.357 pessoas que estão ganhando muito por terem entrado no
             momento certo, mesmo sem muito conhecimento.
@@ -100,24 +104,26 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12"
+            className="mt-8 md:mt-12"
           >
-            <div className="mb-6">
+            <div className="mb-4 md:mb-6">
               <div className="mb-4 inline-block">
-                <p className="text-[#FFD700] font-bold mb-2 tracking-wide">ATENÇÃO: Últimas vagas disponíveis!</p>
+                <p className="text-[#FFD700] font-bold mb-2 tracking-wide text-sm md:text-base">
+                  ATENÇÃO: Últimas vagas disponíveis!
+                </p>
                 <CountdownTimer />
-                <p className="text-white/70 text-sm mt-2">
+                <p className="text-white/70 text-xs md:text-sm mt-2">
                   Após este período, o valor do investimento aumentará em 50%.
                 </p>
               </div>
             </div>
 
-            <GoldButton size="lg" className="text-lg px-10">
+            <GoldButton size="lg" className="text-sm md:text-lg px-6 md:px-10">
               QUERO APRENDER A INVESTIR EM CRIPTO!
             </GoldButton>
 
-            <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-sm">
-              <div className="w-5 h-5 flex items-center justify-center">🔒</div>
+            <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-xs md:text-sm">
+              <div className="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">🔒</div>
               <p>Pagamento 100% seguro • Garantia de 7 dias</p>
             </div>
           </motion.div>
@@ -127,10 +133,10 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ delay: 1, duration: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2"
         >
           <div className="flex flex-col items-center">
-            <span className="text-sm text-white/60 mb-2">Descubra mais</span>
+            <span className="text-xs md:text-sm text-white/60 mb-2">Descubra mais</span>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{
@@ -139,18 +145,18 @@ export default function Home() {
                 ease: "easeInOut",
               }}
             >
-              <ChevronDown className="w-6 h-6 text-[#FFD700]/70" />
+              <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700]/70" />
             </motion.div>
           </div>
         </motion.div>
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
-          <div className="rounded-2xl p-8 md:p-12 bg-[#0A0A0A] relative overflow-hidden border border-[#FFD700]/10">
+          <div className="rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-12 bg-[#0A0A0A] relative overflow-hidden border border-[#FFD700]/10">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700]/5 to-transparent"></div>
 
             <motion.h2
@@ -158,14 +164,14 @@ export default function Home() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-2xl md:text-3xl font-bold mb-10 text-center"
+              className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-10 text-center"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
                 Você se identifica com alguma dessas situações?
               </span>
             </motion.h2>
 
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {[
                 "Você sente que está de fora da maior revolução financeira da história?",
                 "Já viu pessoas ganhando dinheiro com criptomoedas, mas acha tudo muito complicado?",
@@ -180,10 +186,10 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <div className="min-w-6 h-6 rounded-full bg-[#FFD700]/20 flex items-center justify-center mt-0.5">
+                  <div className="min-w-5 h-5 md:min-w-6 md:h-6 rounded-full bg-[#FFD700]/20 flex items-center justify-center mt-0.5">
                     <span className="text-xs font-bold text-[#FFD700]">•</span>
                   </div>
-                  <p className="text-lg md:text-xl font-medium">{question}</p>
+                  <p className="text-base md:text-lg lg:text-xl font-medium">{question}</p>
                 </motion.div>
               ))}
             </div>
@@ -193,9 +199,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-10 text-center"
+              className="mt-8 md:mt-10 text-center"
             >
-              <p className="text-xl md:text-2xl font-semibold text-[#FFD700]">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-[#FFD700]">
                 ➡ Se você respondeu SIM para alguma dessas perguntas, então este é o método certo para você.
               </p>
             </motion.div>
@@ -204,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Opportunity Section */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -213,18 +219,18 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold mb-12 text-center"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
               Por Que Agora É o Momento Perfeito?
             </span>
           </motion.h2>
 
-          <div className="mb-16">
+          <div className="mb-10 md:mb-16">
             <NewsCarousel />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {[
               "O mercado cripto ainda está no começo",
               "Os ciclos de alta sempre voltam",
@@ -236,13 +242,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-6 backdrop-blur-sm"
+                className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-4 md:p-6 backdrop-blur-sm"
               >
                 <div className="flex items-start gap-3">
-                  <div className="min-w-6 h-6 rounded-full bg-[#FFD700]/20 flex items-center justify-center mt-0.5">
-                    <Check className="w-4 h-4 text-[#FFD700]" />
+                  <div className="min-w-5 h-5 md:min-w-6 md:h-6 rounded-full bg-[#FFD700]/20 flex items-center justify-center mt-0.5">
+                    <Check className="w-3 h-3 md:w-4 md:h-4 text-[#FFD700]" />
                   </div>
-                  <p className="text-lg font-medium">{point}</p>
+                  <p className="text-base md:text-lg font-medium">{point}</p>
                 </div>
               </motion.div>
             ))}
@@ -251,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* Investment Strategies Section */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -260,23 +266,23 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold mb-12 text-center"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
               VOCÊ PRECISA ENTENDER O QUE É:
             </span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Buy and Hold Strategy */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-6 flex flex-col items-center text-center"
+              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-5 md:p-6 flex flex-col items-center text-center"
             >
-              <div className="w-32 h-32 mb-6">
+              <div className="w-24 h-24 md:w-32 md:h-32 mb-4 md:mb-6">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   <rect x="10" y="40" width="15" height="40" fill="#FFD700" opacity="0.3" />
                   <rect x="30" y="30" width="15" height="50" fill="#FFD700" opacity="0.5" />
@@ -288,8 +294,8 @@ export default function Home() {
                   <circle cx="85" cy="35" r="5" fill="#FFD700" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#FFD700] mb-3">BUY AND HOLD</h3>
-              <p className="text-white/80">
+              <h3 className="text-lg md:text-xl font-bold text-[#FFD700] mb-2 md:mb-3">BUY AND HOLD</h3>
+              <p className="text-sm md:text-base text-white/80">
                 Estratégia de construção de carteira, onde você compra criptomoedas de qualidade e na quantidade certa,
                 visando a supervalorização a longo prazo. Ideal para quem busca crescimento sustentável e não quer se
                 preocupar com o dia a dia do mercado.
@@ -302,9 +308,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-6 flex flex-col items-center text-center"
+              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-5 md:p-6 flex flex-col items-center text-center"
             >
-              <div className="w-32 h-32 mb-6">
+              <div className="w-24 h-24 md:w-32 md:h-32 mb-4 md:mb-6">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   <circle cx="50" cy="50" r="30" fill="#FFD700" opacity="0.2" />
                   <circle cx="50" cy="50" r="20" fill="#FFD700" opacity="0.4" />
@@ -320,8 +326,10 @@ export default function Home() {
                   <path d="M50,10 L55,20 L45,20 Z" fill="#FFD700" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#FFD700] mb-3">LANÇAMENTOS DE TOKENS EXPLOSIVOS</h3>
-              <p className="text-white/80">
+              <h3 className="text-lg md:text-xl font-bold text-[#FFD700] mb-2 md:mb-3">
+                LANÇAMENTOS DE TOKENS EXPLOSIVOS
+              </h3>
+              <p className="text-sm md:text-base text-white/80">
                 Aprenda a como Identificar e investir em novos tokens com potencial de crescimento exponencial. Esta
                 estratégia, pode gerar retornos impressionantes quando você encontra projetos promissores antes da
                 maioria.
@@ -334,9 +342,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-6 flex flex-col items-center text-center"
+              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-5 md:p-6 flex flex-col items-center text-center"
             >
-              <div className="w-32 h-32 mb-6">
+              <div className="w-24 h-24 md:w-32 md:h-32 mb-4 md:mb-6">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   <path d="M10,50 C10,50 30,20 50,50 C70,80 90,50 90,50" stroke="#FFD700" strokeWidth="2" fill="none" />
                   <path d="M10,80 L90,80" stroke="#FFD700" strokeWidth="2" />
@@ -356,8 +364,8 @@ export default function Home() {
                   </text>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#FFD700] mb-3">OPERAÇÃO NO MERCADO FUTUROS</h3>
-              <p className="text-white/80">
+              <h3 className="text-lg md:text-xl font-bold text-[#FFD700] mb-2 md:mb-3">OPERAÇÃO NO MERCADO FUTUROS</h3>
+              <p className="text-sm md:text-base text-white/80">
                 Negociar contratos futuros permite alavancar suas posições e lucrar tanto em mercados de alta quanto de
                 baixa, vendendo ou comprando. Aprenda a usar as ferramentas do mercado a seu favor, para saber ganhar em
                 todos os momentos.
@@ -370,9 +378,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-6 flex flex-col items-center text-center"
+              className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-5 md:p-6 flex flex-col items-center text-center"
             >
-              <div className="w-32 h-32 mb-6">
+              <div className="w-24 h-24 md:w-32 md:h-32 mb-4 md:mb-6">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   <path d="M10,80 L90,80" stroke="#FFD700" strokeWidth="2" />
                   <path d="M10,20 L10,80" stroke="#FFD700" strokeWidth="2" />
@@ -391,8 +399,8 @@ export default function Home() {
                   </text>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#FFD700] mb-3">FAÇA MUITO COM POUCO</h3>
-              <p className="text-white/80">
+              <h3 className="text-lg md:text-xl font-bold text-[#FFD700] mb-2 md:mb-3">FAÇA MUITO COM POUCO</h3>
+              <p className="text-sm md:text-base text-white/80">
                 Utilizando estratégias de alavancagem, é possível maximizar seus ganhos com um capital inicial reduzido.
                 Aprenda a identificar tendências e usar ferramentas financeiras para multiplicar seus resultados,
                 independentemente da direção do mercado.
@@ -405,13 +413,13 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-12 text-center"
+            className="mt-10 md:mt-12 text-center"
           >
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8">
               Nosso método ensina todas essas estratégias de forma simples e prática, para que você possa escolher a que
               melhor se adapta ao seu perfil.
             </p>
-            <GoldButton size="lg" className="text-lg px-10">
+            <GoldButton size="lg" className="text-sm md:text-lg px-6 md:px-10">
               QUERO DOMINAR ESSAS ESTRATÉGIAS
             </GoldButton>
           </motion.div>
@@ -419,7 +427,7 @@ export default function Home() {
       </section>
 
       {/* Product Presentation */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -428,7 +436,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold mb-12 text-center"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
               O Que Você Vai Aprender
@@ -437,7 +445,7 @@ export default function Home() {
 
           <ModuleMap />
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="mt-10 md:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {[
               { title: "Checklist de Segurança Cripto", icon: "🔒" },
               { title: "Comunidade Exclusiva", icon: "👥" },
@@ -450,13 +458,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border border-[#FFD700]/20 rounded-xl p-6 bg-[#0A0A0A]"
+                className="border border-[#FFD700]/20 rounded-xl p-4 md:p-6 bg-[#0A0A0A]"
               >
-                <div className="flex items-center gap-4">
-                  <div className="text-3xl">{bonus.icon}</div>
+                <div className="flex items-center gap-3 md:gap-4">
+                  <div className="text-2xl md:text-3xl">{bonus.icon}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#FFD700]">BÔNUS {index + 1}</h3>
-                    <p className="text-lg text-white/80">{bonus.title}</p>
+                    <h3 className="text-base md:text-xl font-bold text-[#FFD700]">BÔNUS {index + 1}</h3>
+                    <p className="text-sm md:text-lg text-white/80">{bonus.title}</p>
                   </div>
                 </div>
               </motion.div>
@@ -466,7 +474,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -475,7 +483,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold mb-12 text-center"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
               O Que Nossos Alunos Estão Dizendo
@@ -487,7 +495,7 @@ export default function Home() {
       </section>
 
       {/* Mentor Section */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -496,16 +504,16 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold mb-12 text-center"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
               Conheça Seu Mentor
             </span>
           </motion.h2>
 
-          <div className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-6 md:p-8">
-            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-              <div className="w-40 h-40 md:w-48 md:h-48 rounded-xl overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
+          <div className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-5 md:p-8">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
+              <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-xl overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
                 <img
                   src="/placeholder.svg?height=300&width=300"
                   alt="Mentor de Criptomoedas"
@@ -514,10 +522,14 @@ export default function Home() {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-[#FFD700] mb-2">Ricardo Almeida</h3>
-                <p className="text-white/60 mb-4">Especialista em Criptomoedas & Investimentos Digitais</p>
+                <h3 className="text-xl md:text-2xl font-bold text-[#FFD700] mb-2 text-center md:text-left">
+                  Ricardo Almeida
+                </h3>
+                <p className="text-white/60 mb-4 text-center md:text-left text-sm md:text-base">
+                  Especialista em Criptomoedas & Investimentos Digitais
+                </p>
 
-                <div className="space-y-4 text-white/80">
+                <div className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
                   <p>
                     Com mais de 7 anos de experiência no mercado de criptomoedas, Ricardo já ajudou mais de 1.000
                     pessoas a iniciarem sua jornada no mundo cripto de forma segura e lucrativa.
@@ -534,12 +546,12 @@ export default function Home() {
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   <div className="bg-black/30 p-3 rounded-lg text-center">
-                    <p className="text-2xl font-bold text-[#FFD700]">1.000+</p>
-                    <p className="text-sm text-white/70">Alunos</p>
+                    <p className="text-xl md:text-2xl font-bold text-[#FFD700]">1.000+</p>
+                    <p className="text-xs md:text-sm text-white/70">Alunos</p>
                   </div>
                   <div className="bg-black/30 p-3 rounded-lg text-center">
-                    <p className="text-2xl font-bold text-[#FFD700]">7+</p>
-                    <p className="text-sm text-white/70">Anos de Experiência</p>
+                    <p className="text-xl md:text-2xl font-bold text-[#FFD700]">7+</p>
+                    <p className="text-xs md:text-sm text-white/70">Anos de Experiência</p>
                   </div>
                 </div>
               </div>
@@ -549,17 +561,17 @@ export default function Home() {
       </section>
 
       {/* A Escolha É Sua Section - Movida para após o Mentor */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <motion.h2
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-2xl md:text-4xl font-bold mb-6"
+              className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 md:mb-6"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
                 A Escolha É Sua
@@ -567,26 +579,26 @@ export default function Home() {
             </motion.h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-[#0A0A0A] border border-white/10 rounded-xl p-6 backdrop-blur-sm"
+              className="bg-[#0A0A0A] border border-white/10 rounded-xl p-5 md:p-6 backdrop-blur-sm"
             >
-              <div className="flex items-start gap-3 mb-4">
-                <div className="min-w-6 h-6 rounded-full bg-white/10 flex items-center justify-center mt-0.5">
-                  <X className="w-4 h-4 text-white/80" />
+              <div className="flex items-start gap-3 mb-3 md:mb-4">
+                <div className="min-w-5 h-5 md:min-w-6 md:h-6 rounded-full bg-white/10 flex items-center justify-center mt-0.5">
+                  <X className="w-3 h-3 md:w-4 md:h-4 text-white/80" />
                 </div>
-                <p className="text-lg font-medium">
+                <p className="text-base md:text-lg font-medium">
                   Ficar parado, vendo os outros ganharem dinheiro enquanto você fica de fora
                 </p>
               </div>
-              <ul className="space-y-3 pl-9">
-                <li className="text-white/70 list-disc">Perder oportunidades de investimento</li>
-                <li className="text-white/70 list-disc">Continuar com medo e dúvidas</li>
-                <li className="text-white/70 list-disc">Depender apenas da renda tradicional</li>
+              <ul className="space-y-2 md:space-y-3 pl-8 md:pl-9">
+                <li className="text-sm md:text-base text-white/70 list-disc">Perder oportunidades de investimento</li>
+                <li className="text-sm md:text-base text-white/70 list-disc">Continuar com medo e dúvidas</li>
+                <li className="text-sm md:text-base text-white/70 list-disc">Depender apenas da renda tradicional</li>
               </ul>
             </motion.div>
 
@@ -595,20 +607,20 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-[#0A0A0A] border border-[#FFD700]/20 rounded-xl p-6 backdrop-blur-sm"
+              className="bg-[#0A0A0A] border border-[#FFD700]/20 rounded-xl p-5 md:p-6 backdrop-blur-sm"
             >
-              <div className="flex items-start gap-3 mb-4">
-                <div className="min-w-6 h-6 rounded-full bg-[#FFD700]/20 flex items-center justify-center mt-0.5">
-                  <Check className="w-4 h-4 text-[#FFD700]" />
+              <div className="flex items-start gap-3 mb-3 md:mb-4">
+                <div className="min-w-5 h-5 md:min-w-6 md:h-6 rounded-full bg-[#FFD700]/20 flex items-center justify-center mt-0.5">
+                  <Check className="w-3 h-3 md:w-4 md:h-4 text-[#FFD700]" />
                 </div>
-                <p className="text-lg font-medium">
+                <p className="text-base md:text-lg font-medium">
                   Entrar agora no mercado de forma segura e começar sua jornada rumo à liberdade financeira
                 </p>
               </div>
-              <ul className="space-y-3 pl-9">
-                <li className="text-white/70 list-disc">Aprender de forma simples e direta</li>
-                <li className="text-white/70 list-disc">Investir com confiança e segurança</li>
-                <li className="text-white/70 list-disc">Fazer parte da revolução financeira</li>
+              <ul className="space-y-2 md:space-y-3 pl-8 md:pl-9">
+                <li className="text-sm md:text-base text-white/70 list-disc">Aprender de forma simples e direta</li>
+                <li className="text-sm md:text-base text-white/70 list-disc">Investir com confiança e segurança</li>
+                <li className="text-sm md:text-base text-white/70 list-disc">Fazer parte da revolução financeira</li>
               </ul>
             </motion.div>
           </div>
@@ -622,19 +634,21 @@ export default function Home() {
           >
             <div>
               <div className="mb-6 text-center">
-                <p className="text-[#FFD700] font-bold mb-2">ATENÇÃO: Últimas vagas disponíveis!</p>
+                <p className="text-[#FFD700] font-bold mb-2 text-sm md:text-base">
+                  ATENÇÃO: Últimas vagas disponíveis!
+                </p>
                 <CountdownTimer />
-                <p className="text-white/70 text-sm mt-2">
+                <p className="text-white/70 text-xs md:text-sm mt-2">
                   Após este período, o valor do investimento aumentará em 50%.
                 </p>
               </div>
 
-              <GoldButton size="lg" className="text-lg px-10">
+              <GoldButton size="lg" className="text-sm md:text-lg px-6 md:px-10">
                 QUERO APRENDER A INVESTIR EM CRIPTO!
               </GoldButton>
 
-              <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-sm">
-                <div className="w-5 h-5 flex items-center justify-center">🔒</div>
+              <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-xs md:text-sm">
+                <div className="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">🔒</div>
                 <p>Pagamento 100% seguro • Garantia de 7 dias</p>
               </div>
             </div>
@@ -643,7 +657,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -652,45 +666,49 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="border border-[#FFD700]/20 rounded-2xl p-8 md:p-12 bg-[#0A0A0A] relative overflow-hidden"
+            className="border border-[#FFD700]/20 rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-12 bg-[#0A0A0A] relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFD700]/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#FFD700]/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            <div className="text-center mb-6 md:mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3 md:mb-4">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
                   Investimento Especial
                 </span>
               </h2>
-              <p className="text-lg text-white/80">Acesso vitalício a todo o conteúdo</p>
+              <p className="text-base md:text-lg text-white/80">Acesso vitalício a todo o conteúdo</p>
             </div>
 
-            <div className="flex flex-col items-center mb-8">
+            <div className="flex flex-col items-center mb-6 md:mb-8">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-lg text-white/60 line-through">De R$ 997,00</span>
-                <span className="bg-[#FFD700]/20 text-[#FFD700] text-sm px-2 py-1 rounded-full">60% OFF</span>
+                <span className="text-base md:text-lg text-white/60 line-through">De R$ 997,00</span>
+                <span className="bg-[#FFD700]/20 text-[#FFD700] text-xs md:text-sm px-2 py-1 rounded-full">
+                  60% OFF
+                </span>
               </div>
-              <div className="text-4xl md:text-6xl font-bold text-[#FFD700] mb-2">R$ 397,00</div>
-              <p className="text-white/80">ou 12x de R$ 39,70</p>
+              <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#FFD700] mb-2">R$ 397,00</div>
+              <p className="text-sm md:text-base text-white/80">ou 12x de R$ 39,70</p>
             </div>
 
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-6 md:mb-8">
               <div className="w-full">
                 <div className="mb-6 text-center">
-                  <p className="text-[#FFD700] font-bold mb-2">ATENÇÃO: Últimas vagas disponíveis!</p>
+                  <p className="text-[#FFD700] font-bold mb-2 text-sm md:text-base">
+                    ATENÇÃO: Últimas vagas disponíveis!
+                  </p>
                   <CountdownTimer />
-                  <p className="text-white/70 text-sm mt-2">
+                  <p className="text-white/70 text-xs md:text-sm mt-2">
                     Após este período, o valor do investimento aumentará em 50%.
                   </p>
                 </div>
 
-                <GoldButton size="lg" className="text-lg w-full">
+                <GoldButton size="lg" className="text-sm md:text-lg w-full">
                   QUERO APRENDER A INVESTIR EM CRIPTO!
                 </GoldButton>
 
-                <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-sm">
-                  <div className="w-5 h-5 flex items-center justify-center">🔒</div>
+                <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-xs md:text-sm">
+                  <div className="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">🔒</div>
                   <p>Pagamento 100% seguro • Garantia de 7 dias</p>
                 </div>
               </div>
@@ -700,7 +718,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 relative">
+      <section className="py-12 md:py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -709,14 +727,14 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold mb-12 text-center"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107]">
               Perguntas Frequentes
             </span>
           </motion.h2>
 
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {[
               {
                 question: "Preciso ter conhecimento prévio sobre criptomoedas?",
@@ -757,9 +775,9 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl overflow-hidden"
               >
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#FFD700] mb-3">{faq.question}</h3>
-                  <p className="text-white/80">{faq.answer}</p>
+                <div className="p-5 md:p-6">
+                  <h3 className="text-lg md:text-xl font-bold text-[#FFD700] mb-2 md:mb-3">{faq.question}</h3>
+                  <p className="text-sm md:text-base text-white/80">{faq.answer}</p>
                 </div>
               </motion.div>
             ))}
@@ -770,9 +788,9 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-12 text-center"
+            className="mt-10 md:mt-12 text-center"
           >
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8">
               Ainda tem dúvidas? Entre em contato conosco pelo e-mail{" "}
               <span className="text-[#FFD700]">suporte@mapacripto.com.br</span>
             </p>
@@ -781,8 +799,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-white/5">
-        <div className="container max-w-4xl mx-auto px-4 text-center text-white/50 text-sm">
+      <footer className="py-6 md:py-8 border-t border-white/5">
+        <div className="container max-w-4xl mx-auto px-4 text-center text-white/50 text-xs md:text-sm">
           <p>© {new Date().getFullYear()} Mapa do Tesouro Cripto. Todos os direitos reservados.</p>
           <p className="mt-2">Este site não constitui aconselhamento financeiro. Investimentos envolvem riscos.</p>
         </div>
