@@ -515,7 +515,7 @@ export default function Home() {
 
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-bold text-[#FFD700] mb-2 text-center md:text-left">
-                  Ricardo Almeida
+                  Trader Henrique
                 </h3>
                 <p className="text-white/60 mb-4 text-center md:text-left text-sm md:text-base">
                   Especialista em Criptomoedas & Investimentos Digitais
@@ -523,11 +523,11 @@ export default function Home() {
 
                 <div className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
                   <p>
-                    Com mais de 7 anos de experiência no mercado de criptomoedas, Ricardo já ajudou mais de 1.000
+                    Com mais de 7 anos de experiência no mercado de criptomoedas, já ajudou mais de 1.000
                     pessoas a iniciarem sua jornada no mundo cripto de forma segura e lucrativa.
                   </p>
                   <p>
-                    Ex-trader institucional e formado em Economia pela USP, abandonou o mercado tradicional em 2017 para
+                    Ex-trader institucional, abandonou o mercado tradicional em 2017 para
                     se dedicar exclusivamente às criptomoedas, tendo passado por dois ciclos completos de alta e baixa.
                   </p>
                   <p>Sua metodologia combina estratégias de longo prazo com oportunidades de curto prazo,</p>
