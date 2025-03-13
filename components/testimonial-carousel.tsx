@@ -57,9 +57,9 @@ export default function TestimonialCarousel() {
           transition={{ duration: 0.5 }}
           className="w-full"
         >
-          <Card className="border border-[#FFD700]/10 bg-[#0A0A0A] backdrop-blur-sm p-6 md:p-8 rounded-xl">
-            <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-              <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
+          <Card className="border border-[#FFD700]/10 bg-[#0A0A0A] backdrop-blur-sm p-4 md:p-6 lg:p-8 rounded-xl">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
                 <img
                   src={testimonials[current].avatar || "/placeholder.svg"}
                   alt={testimonials[current].name}
@@ -67,9 +67,11 @@ export default function TestimonialCarousel() {
                 />
               </div>
 
-              <div className="flex-1">
-                <Quote className="w-8 h-8 text-[#FFD700]/30 mb-2" />
-                <p className="text-lg md:text-xl mb-4 italic text-white/90">"{testimonials[current].text}"</p>
+              <div className="flex-1 text-center md:text-left">
+                <Quote className="w-6 h-6 md:w-8 md:h-8 text-[#FFD700]/30 mb-2 mx-auto md:mx-0" />
+                <p className="text-base md:text-lg lg:text-xl mb-3 md:mb-4 italic text-white/90">
+                  "{testimonials[current].text}"
+                </p>
                 <p className="font-bold text-[#FFD700]">{testimonials[current].name}</p>
               </div>
             </div>
@@ -77,7 +79,7 @@ export default function TestimonialCarousel() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="flex justify-center gap-2 mt-4 md:mt-6">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -94,25 +96,25 @@ export default function TestimonialCarousel() {
         <Button
           variant="outline"
           size="icon"
-          className="bg-[#0A0A0A] border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full"
+          className="bg-[#0A0A0A] border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full w-8 h-8 md:w-10 md:h-10"
           onClick={() => {
             prev()
             setAutoplay(false)
           }}
         >
-          <ChevronLeft className="h-4 w-4" />
+          <ChevronLeft className="h-3 w-3 md:h-4 md:w-4" />
         </Button>
 
         <Button
           variant="outline"
           size="icon"
-          className="bg-[#0A0A0A] border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full"
+          className="bg-[#0A0A0A] border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full w-8 h-8 md:w-10 md:h-10"
           onClick={() => {
             next()
             setAutoplay(false)
           }}
         >
-          <ChevronRight className="h-4 w-4" />
+          <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
         </Button>
       </div>
     </div>
