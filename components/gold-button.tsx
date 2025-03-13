@@ -33,6 +33,9 @@ export default function GoldButton({ children, className, size = "default", onCl
           "text-black border-0 shadow-lg",
           "transition-all duration-300",
           "rounded-full",
+          "px-3 sm:px-4 md:px-6",
+          "text-xs sm:text-sm md:text-base",
+          "h-auto min-h-[2.5rem] md:min-h-[2.75rem]",
           className,
         )}
         size={size}
@@ -45,3 +48,4 @@ export default function GoldButton({ children, className, size = "default", onCl
     </div>
   )
 }
+
