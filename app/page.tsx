@@ -106,17 +106,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-8 md:mt-12"
           >
-            <div className="mb-4 md:mb-6">
-              <div className="mb-4 inline-block">
-                <p className="text-[#FFD700] font-bold mb-2 tracking-wide text-sm md:text-base">
-                  ATENÇÃO: Últimas vagas disponíveis!
-                </p>
-                <CountdownTimer />
-                <p className="text-white/70 text-xs md:text-sm mt-2">
-                  Após este período, o valor do investimento aumentará em 50%.
-                </p>
-              </div>
-            </div>
+            <div className="mb-4 md:mb-6"></div>
 
             <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
               <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
