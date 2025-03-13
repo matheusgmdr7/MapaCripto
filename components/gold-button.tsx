@@ -48,3 +48,4 @@ export default function GoldButton({ children, className, size = "default", onCl
     </div>
   )
 }
+
