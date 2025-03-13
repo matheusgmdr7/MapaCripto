@@ -1,6 +1,10 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
-  publish = ".next"
+  command = "npm run build"
+  publish = "out"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Removendo o plugin do Netlify para Next.js, já que estamos usando exportação estática
+# [[plugins]]
+# package = "@netlify/plugin-nextjs"
