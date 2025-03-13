@@ -118,8 +118,9 @@ export default function Home() {
               </div>
             </div>
 
-            <GoldButton size="lg" className="text-sm md:text-lg px-6 md:px-10">
-              QUERO APRENDER A INVESTIR EM CRIPTO!
+            <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
+              <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
+              <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
             </GoldButton>
 
             <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-xs md:text-sm">
@@ -419,8 +420,9 @@ export default function Home() {
               Nosso método ensina todas essas estratégias de forma simples e prática, para que você possa escolher a que
               melhor se adapta ao seu perfil.
             </p>
-            <GoldButton size="lg" className="text-sm md:text-lg px-6 md:px-10">
-              QUERO DOMINAR ESSAS ESTRATÉGIAS
+            <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
+              <span className="block sm:hidden">DOMINAR ESTRATÉGIAS</span>
+              <span className="hidden sm:block">QUERO DOMINAR ESSAS ESTRATÉGIAS</span>
             </GoldButton>
           </motion.div>
         </div>
@@ -538,10 +540,8 @@ export default function Home() {
                     Ex-trader institucional e formado em Economia pela USP, abandonou o mercado tradicional em 2017 para
                     se dedicar exclusivamente às criptomoedas, tendo passado por dois ciclos completos de alta e baixa.
                   </p>
-                  <p>
-                    Sua metodologia combina estratégias de longo prazo com oportunidades de curto prazo, ajudando alunos
-                    a alcançarem resultados consistentes no mercado de criptomoedas.
-                  </p>
+                  <p>Sua metodologia combina estratégias de longo prazo com oportunidades de curto prazo,</p>
+                  <p>ajudando alunos a alcançarem resultados consistentes no mercado de criptomoedas.</p>
                 </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
@@ -643,8 +643,9 @@ export default function Home() {
                 </p>
               </div>
 
-              <GoldButton size="lg" className="text-sm md:text-lg px-6 md:px-10">
-                QUERO APRENDER A INVESTIR EM CRIPTO!
+              <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
+                <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
+                <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
               </GoldButton>
 
               <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-xs md:text-sm">
@@ -703,8 +704,9 @@ export default function Home() {
                   </p>
                 </div>
 
-                <GoldButton size="lg" className="text-sm md:text-lg w-full">
-                  QUERO APRENDER A INVESTIR EM CRIPTO!
+                <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg w-full py-2 sm:py-3 whitespace-normal">
+                  <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
+                  <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
                 </GoldButton>
 
                 <div className="mt-4 flex justify-center items-center gap-2 text-white/70 text-xs md:text-sm">
