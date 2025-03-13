@@ -59,23 +59,23 @@ export default function CountdownTimer() {
 
   return (
     <div className="flex justify-center">
-      <div className="flex gap-2 md:gap-4">
+      <div className="flex gap-1 md:gap-2 lg:gap-4">
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-[#FFD700]">{formatTime(timeLeft.hours)}</div>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FFD700]">{formatTime(timeLeft.hours)}</div>
           <div className="text-xs text-white/70">horas</div>
         </div>
 
-        <div className="flex items-center text-[#FFD700] text-2xl font-bold">:</div>
+        <div className="flex items-center text-[#FFD700] text-xl sm:text-2xl font-bold">:</div>
 
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-[#FFD700]">{formatTime(timeLeft.minutes)}</div>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FFD700]">{formatTime(timeLeft.minutes)}</div>
           <div className="text-xs text-white/70">minutos</div>
         </div>
 
-        <div className="flex items-center text-[#FFD700] text-2xl font-bold">:</div>
+        <div className="flex items-center text-[#FFD700] text-xl sm:text-2xl font-bold">:</div>
 
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-[#FFD700]">{formatTime(timeLeft.seconds)}</div>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FFD700]">{formatTime(timeLeft.seconds)}</div>
           <div className="text-xs text-white/70">segundos</div>
         </div>
       </div>
