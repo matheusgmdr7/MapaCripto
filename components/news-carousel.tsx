@@ -84,7 +84,7 @@ export default function NewsCarousel() {
   }, [])
 
   return (
-    <div className="relative rounded-xl overflow-hidden h-[300px] md:h-[400px]">
+    <div className="relative rounded-xl overflow-hidden h-[250px] sm:h-[300px] md:h-[400px]">
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
 
       <AnimatePresence mode="wait">
@@ -111,23 +111,23 @@ export default function NewsCarousel() {
             {/* Indicador de carregamento caso a imagem não tenha sido carregada ainda */}
             {!imagesLoaded[current] && (
               <div className="absolute inset-0 flex items-center justify-center bg-black/70">
-                <div className="w-8 h-8 border-4 border-[#FFD700]/30 border-t-[#FFD700] rounded-full animate-spin"></div>
+                <div className="w-6 h-6 md:w-8 md:h-8 border-3 md:border-4 border-[#FFD700]/30 border-t-[#FFD700] rounded-full animate-spin"></div>
               </div>
             )}
           </div>
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 z-20">
         <motion.div
           key={`text-${current}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="bg-[#0A0A0A]/80 backdrop-blur-sm p-4 rounded-xl border border-[#FFD700]/10">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{news[current].title}</h3>
-            <p className="text-[#FFD700] text-sm">Fonte: {news[current].source}</p>
+          <div className="bg-[#0A0A0A]/80 backdrop-blur-sm p-3 md:p-4 rounded-xl border border-[#FFD700]/10">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 md:mb-2">{news[current].title}</h3>
+            <p className="text-[#FFD700] text-xs md:text-sm">Fonte: {news[current].source}</p>
           </div>
         </motion.div>
       </div>
@@ -135,7 +135,7 @@ export default function NewsCarousel() {
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full w-8 h-8 md:w-10 md:h-10"
         onClick={() => {
           prev()
           setAutoplay(false)
@@ -147,7 +147,7 @@ export default function NewsCarousel() {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-[#FFD700]/20 text-[#FFD700] hover:bg-black/70 hover:text-[#FFD700] rounded-full w-8 h-8 md:w-10 md:h-10"
         onClick={() => {
           next()
           setAutoplay(false)
