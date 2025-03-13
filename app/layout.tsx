@@ -10,21 +10,8 @@ export const metadata: Metadata = {
   title: "MapaCripto - Seu guia para o mercado de criptomoedas",
   description: "Aprenda a investir em criptomoedas de forma segura e lucrativa com o método exclusivo MapaCripto.",
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/icon.png",
-        type: "image/png",
-        sizes: "192x192",
-      },
-    ],
-    apple: {
-      url: "/apple-icon.png",
-      sizes: "180x180",
-    },
+    icon: "/favicon.png",
+    apple: "/apple-icon.png",
   },
 }
 
