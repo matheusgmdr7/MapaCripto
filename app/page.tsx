@@ -1,4 +1,15 @@
 "use client"
+import PageTitle from "@/components/page-title"
+
+export default function Home() {
+  // Resto do código existente...
+
+  return (
+    <main className="bg-black text-white min-h-screen">
+      <PageTitle title="MapaCripto - Seu guia para o mercado de criptomoedas" />
+
+      {/* Resto do conteúdo existente... */}
+    </main>
 
 import { useState, useEffect, useRef } from "react"
 import { motion, useScroll } from "framer-motion"
