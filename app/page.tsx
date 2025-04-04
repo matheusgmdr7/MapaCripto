@@ -13,6 +13,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollY } = useScroll()
   const headerRef = useRef<HTMLDivElement>(null)
+  const pricingSectionRef = useRef<HTMLDivElement>(null)
 
   // Show fixed CTA after scrolling past the header
   useEffect(() => {
@@ -27,6 +28,11 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Função para rolar até a seção de preços
+  const scrollToPricing = () => {
+    pricingSectionRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <main className="bg-black text-white min-h-screen">
       {/* Fixed CTA Button */}
@@ -35,7 +41,7 @@ export default function Home() {
           <div className="text-xs md:text-base font-medium text-[#FFD700] truncate mr-2">
             A Revolução Cripto Espera Por Você
           </div>
-          <GoldButton size="sm" className="whitespace-nowrap text-xs md:text-sm">
+          <GoldButton size="sm" className="whitespace-nowrap text-xs md:text-sm" onClick={scrollToPricing}>
             QUERO INVESTIR
           </GoldButton>
         </div>
@@ -44,7 +50,7 @@ export default function Home() {
       {/* Header Section */}
       <section
         ref={headerRef}
-        className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 py-16 md:py-20 lg:py-32 overflow-hidden"
+        className="relative min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center text-center px-3 sm:px-4 py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden"
       >
         {/* Modern background with subtle pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111] to-black">
@@ -80,7 +86,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight tracking-tight"
+            className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight tracking-tight"
           >
             <span
               className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFC107] drop-shadow-[0_0_5px_rgba(255,215,0,0.2)]"
@@ -108,7 +114,11 @@ export default function Home() {
           >
             <div className="mb-4 md:mb-6"></div>
 
-            <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
+            <GoldButton
+              size="lg"
+              className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal"
+              onClick={scrollToPricing}
+            >
               <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
               <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
             </GoldButton>
@@ -143,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -201,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Opportunity Section */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -248,7 +258,7 @@ export default function Home() {
       </section>
 
       {/* Investment Strategies Section */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -410,7 +420,11 @@ export default function Home() {
               Nosso método ensina todas essas estratégias de forma simples e prática, para que você possa escolher a que
               melhor se adapta ao seu perfil.
             </p>
-            <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
+            <GoldButton
+              size="lg"
+              className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal"
+              onClick={scrollToPricing}
+            >
               <span className="block sm:hidden">DOMINAR ESTRATÉGIAS</span>
               <span className="hidden sm:block">QUERO DOMINAR ESSAS ESTRATÉGIAS</span>
             </GoldButton>
@@ -419,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* Product Presentation */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -466,7 +480,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -487,7 +501,7 @@ export default function Home() {
       </section>
 
       {/* Mentor Section */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -504,8 +518,8 @@ export default function Home() {
           </motion.h2>
 
           <div className="bg-[#0A0A0A] border border-[#FFD700]/10 rounded-xl p-5 md:p-8">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-              <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-xl overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-start">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-xl overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
                 <img
                   src="https://i.ibb.co/ccQ45Txh/TRADERHENRIQUE.png"
                   alt="Mentor de Criptomoedas"
@@ -523,12 +537,12 @@ export default function Home() {
 
                 <div className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
                   <p>
-                    Com mais de 7 anos de experiência no mercado de criptomoedas, já ajudou mais de 1.000
-                    pessoas a iniciarem sua jornada no mundo cripto de forma segura e lucrativa.
+                    Com mais de 7 anos de experiência no mercado de criptomoedas, já ajudou mais de 1.000 pessoas a
+                    iniciarem sua jornada no mundo cripto de forma segura e lucrativa.
                   </p>
                   <p>
-                    Ex-trader institucional, abandonou o mercado tradicional em 2017 para
-                    se dedicar exclusivamente às criptomoedas, tendo passado por dois ciclos completos de alta e baixa.
+                    Ex-trader institucional, abandonou o mercado tradicional em 2017 para se dedicar exclusivamente às
+                    criptomoedas, tendo passado por dois ciclos completos de alta e baixa.
                   </p>
                   <p>Sua metodologia combina estratégias de longo prazo com oportunidades de curto prazo,</p>
                   <p>ajudando alunos a alcançarem resultados consistentes no mercado de criptomoedas.</p>
@@ -551,7 +565,7 @@ export default function Home() {
       </section>
 
       {/* A Escolha É Sua Section - Movida para após o Mentor */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -633,7 +647,11 @@ export default function Home() {
                 </p>
               </div>
 
-              <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal">
+              <GoldButton
+                size="lg"
+                className="text-xs sm:text-sm md:text-lg px-4 sm:px-6 md:px-10 whitespace-normal"
+                onClick={scrollToPricing}
+              >
                 <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
                 <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
               </GoldButton>
@@ -648,7 +666,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section ref={pricingSectionRef} className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
@@ -678,8 +696,10 @@ export default function Home() {
                   60% OFF
                 </span>
               </div>
-              <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#FFD700] mb-2">R$ 397,00</div>
-              <p className="text-sm md:text-base text-white/80">ou 12x de R$ 39,70</p>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-[#FFD700] mb-2">
+                R$ 257,00
+              </div>
+              <p className="text-sm md:text-base text-white/80">ou 12x de R$ 25,70</p>
             </div>
 
             <div className="flex justify-center mb-6 md:mb-8">
@@ -694,7 +714,11 @@ export default function Home() {
                   </p>
                 </div>
 
-                <GoldButton size="lg" className="text-xs sm:text-sm md:text-lg w-full py-2 sm:py-3 whitespace-normal">
+                <GoldButton
+                  size="lg"
+                  className="text-xs sm:text-sm md:text-lg w-full py-2 sm:py-3 whitespace-normal"
+                  href="https://pay.kirvano.com/faeaf14a-3f49-41a0-94a1-22757f4351e0"
+                >
                   <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
                   <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
                 </GoldButton>
@@ -710,7 +734,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 md:py-20 px-4 relative">
+      <section className="py-8 sm:py-12 md:py-20 px-3 sm:px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-black to-[#0A0A0A]" />
 
         <div className="container max-w-4xl mx-auto relative z-10">
