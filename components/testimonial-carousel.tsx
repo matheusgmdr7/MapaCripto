@@ -10,17 +10,17 @@ const testimonials = [
   {
     name: "João S.",
     text: "Sempre quis entrar no mercado cripto, mas achava tudo complicado. Com esse guia, entendi tudo e já fiz meus primeiros investimentos!",
-    avatar: "https://i.ibb.co/XWQPRtL/avatar1.jpg", // URL da imagem hospedada
+    avatar: "https://i.ibb.co/k2v9NgL2/joao.jpg", // URL da imagem hospedada
   },
   {
     name: "Camila M.",
     text: "Nunca pensei que poderia entrar no mercado de forma tão segura. Aprendi tudo o que precisava em poucos dias!",
-    avatar: "https://i.ibb.co/Jk8FXkS/avatar2.jpg", // URL da imagem hospedada
+    avatar: "https://i.ibb.co/R4zpv38Y/camila.jpg", // URL da imagem hospedada
   },
   {
     name: "Ricardo P.",
     text: "Já tinha perdido dinheiro antes por não saber o que estava fazendo. Esse método me deu a confiança que eu precisava para voltar ao mercado.",
-    avatar: "https://i.ibb.co/YRKjvtC/avatar3.jpg", // URL da imagem hospedada
+    avatar: "https://i.ibb.co/G4BFRnfp/ricardo.jpg", // URL da imagem hospedada
   },
 ]
 
