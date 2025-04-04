@@ -521,7 +521,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-start">
               <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-xl overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
                 <img
-                  src="https://i.ibb.co/5Xjk7HRR/traderhenrique.png"
+                  src="https://i.ibb.co/3mRWkPRf/Whats-App-Image-2025-04-04-at-14-55-23.jpg"
                   alt="Mentor de Criptomoedas"
                   className="w-full h-full object-cover"
                 />
@@ -529,7 +529,7 @@ export default function Home() {
 
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-bold text-[#FFD700] mb-2 text-center md:text-left">
-                  Trader Henrique
+                  Rafael Marins
                 </h3>
                 <p className="text-white/60 mb-4 text-center md:text-left text-sm md:text-base">
                   Especialista em Criptomoedas & Investimentos Digitais
@@ -537,15 +537,16 @@ export default function Home() {
 
                 <div className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
                   <p>
-                    Com mais de 7 anos de experiência no mercado de criptomoedas, já ajudou mais de 1.000 pessoas a
-                    iniciarem sua jornada no mundo cripto de forma segura e lucrativa.
+                   Tive o prazer de conhecer o mercado através de um amigo que pegou em minhas mãos e mostrou-me o 
+                    caminho para liberdade financeira e que hoje é meu sócio, grande investidor, entusiasta do mercado 
+                    e que já ajudou mais de 2.367 pessoas a iniciarem sua jornada no mundo cripto de forma segura e lucrativa.
                   </p>
                   <p>
-                    Ex-trader institucional, abandonou o mercado tradicional em 2017 para se dedicar exclusivamente às
-                    criptomoedas, tendo passado por dois ciclos completos de alta e baixa.
+                    Tive o prazer de convidá-lo para fazer parte desse projeto incrível e passar para você informações exclusivas 
+                    e valiosíssimas que podem mudar a sua vida.
                   </p>
-                  <p>Sua metodologia combina estratégias de longo prazo com oportunidades de curto prazo,</p>
-                  <p>ajudando alunos a alcançarem resultados consistentes no mercado de criptomoedas.</p>
+                  <p>SSua metodologia combina estratégias de longo prazo e também oportunidades de curto prazo, ajudando alunos 
+                    a alcançarem resultados consistentes no mercado de criptomoedas..</p>
                 </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
