@@ -84,7 +84,7 @@ export default function NewsCarousel() {
   }, [])
 
   return (
-    <div className="relative rounded-xl overflow-hidden h-[250px] sm:h-[300px] md:h-[400px]">
+    <div className="relative rounded-xl overflow-hidden h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
 
       <AnimatePresence mode="wait">
@@ -125,9 +125,11 @@ export default function NewsCarousel() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="bg-[#0A0A0A]/80 backdrop-blur-sm p-3 md:p-4 rounded-xl border border-[#FFD700]/10">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 md:mb-2">{news[current].title}</h3>
-            <p className="text-[#FFD700] text-xs md:text-sm">Fonte: {news[current].source}</p>
+          <div className="bg-[#0A0A0A]/80 backdrop-blur-sm p-2 sm:p-3 md:p-4 rounded-xl border border-[#FFD700]/10">
+            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-1 md:mb-2">
+              {news[current].title}
+            </h3>
+            <p className="text-xs sm:text-xs md:text-sm text-[#FFD700]">Fonte: {news[current].source}</p>
           </div>
         </motion.div>
       </div>
