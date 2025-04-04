@@ -718,7 +718,7 @@ export default function Home() {
                 <GoldButton
                   size="lg"
                   className="text-xs sm:text-sm md:text-lg w-full py-2 sm:py-3 whitespace-normal"
-                  href="https://pay.kirvano.com/faeaf14a-3f49-41a0-94a1-22757f4351e0"
+                  href="https://pay.kirvano.com/faeaf14a-3f49-41a0-94a1-22757f4351e0?aff=99635528-3122-4ba5-b0e5-7956533bedff"
                 >
                   <span className="block sm:hidden">QUERO INVESTIR EM CRIPTO!</span>
                   <span className="hidden sm:block">QUERO APRENDER A INVESTIR EM CRIPTO!</span>
