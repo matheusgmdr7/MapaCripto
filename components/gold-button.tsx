@@ -12,10 +12,20 @@ interface GoldButtonProps {
   className?: string
   size?: "default" | "sm" | "lg"
   onClick?: () => void
+  href?: string
 }
 
-export default function GoldButton({ children, className, size = "default", onClick }: GoldButtonProps) {
+export default function GoldButton({ children, className, size = "default", onClick, href }: GoldButtonProps) {
   const [isHovered, setIsHovered] = useState(false)
+
+  const handleClick = () => {
+    if (href) {
+      window.location.href = href
+    }
+    if (onClick) {
+      onClick()
+    }
+  }
 
   return (
     <div className="relative">
@@ -41,7 +51,7 @@ export default function GoldButton({ children, className, size = "default", onCl
         size={size}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={onClick}
+        onClick={handleClick}
       >
         {children}
       </Button>
