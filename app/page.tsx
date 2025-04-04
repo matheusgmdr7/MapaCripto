@@ -545,7 +545,7 @@ export default function Home() {
                     Tive o prazer de convidá-lo para fazer parte desse projeto incrível e passar para você informações exclusivas 
                     e valiosíssimas que podem mudar a sua vida.
                   </p>
-                  <p>SSua metodologia combina estratégias de longo prazo e também oportunidades de curto prazo, ajudando alunos 
+                  <p>Sua metodologia combina estratégias de longo prazo e também oportunidades de curto prazo, ajudando alunos 
                     a alcançarem resultados consistentes no mercado de criptomoedas..</p>
                 </div>
 
