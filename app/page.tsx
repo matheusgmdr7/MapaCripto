@@ -521,7 +521,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-start">
               <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-xl overflow-hidden border-2 border-[#FFD700]/30 flex-shrink-0">
                 <img
-                  src="https://i.ibb.co/ccQ45Txh/TRADERHENRIQUE.png"
+                  src="https://i.ibb.co/5Xjk7HRR/traderhenrique.png"
                   alt="Mentor de Criptomoedas"
                   className="w-full h-full object-cover"
                 />
